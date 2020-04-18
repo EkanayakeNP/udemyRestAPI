@@ -42,7 +42,7 @@ public class UserDaoService {
 		return user;
 	}
 
-	public User deleteById(int id) {
+	public boolean deleteById(int id) {
 		/*Iterator<User> iterator = users.iterator();
 
 		while (iterator.hasNext()) {
@@ -53,7 +53,7 @@ public class UserDaoService {
 			}
 		}*/
 //JAVA 8
-		users.removeIf(p->p.getId().equals(id));
-		return null;
+		return users.removeIf(p->p.getId().equals(id));
+		
 	}
 }
